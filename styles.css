@@ -1,0 +1,304 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.25rem;
+}
+
+/* Seção Sobre */
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 1));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -40px; /* Para sobrepor o header */
+    animation: fadeIn 1s ease-out;
+}
+
+.foto {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.perfil-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.biografia {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.biografia h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.biografia p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Seção Habilidades */
+.habilidades {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.habilidades h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.habilidades-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.habilidade {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.habilidade:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.habilidade h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.habilidade p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Seção Interesses */
+.interesses {
+    padding: 60px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.interesses h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.interesses-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.interesse {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.interesse:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.interesse h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.interesse p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Seção Contato */
+.contato {
+    background-color: #4CAF50;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.redes-sociais a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.redes-sociais a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.redes-sociais a:hover {
+    color: #45a049;
+    transform: translateY(-3px);
+}
+
+.redes-sociais i {
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #333, #444);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto {
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
+
+    .biografia {
+        padding-left: 0;
+    }
+
+    .habilidade, .interesse {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .habilidade, .interesse {
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1.125rem;
+    }
+
+    .footer p {
+        font-size: 0.875rem;
+    }
+}
+
+/* Botões de contato */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Ícones de Font Awesome */
+.redes-sociais a i {
+    margin-right: 8px;
+}
+
+.redes-sociais a:hover i {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+}
